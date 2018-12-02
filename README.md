@@ -1,5 +1,8 @@
 # Visual Tracking for Corobots
-Master's project code on implementing visual tracking algorithms for corobots
+This project contains supporting code and files for my Master's project at the Rochester Institute of Technology.
+The goal of this project is to provide a good framework of comparing different Visual Tracking algorithms and
+an implementation for making OpenCV tracking compatible with the Robot Operating System (ROS). My adviser is 
+[Dr. Zachary Butler](https://cs.rit.edu/~zjb/).
 
 # Requirements
 This project requires OpenCV and/or ROS to properly run. Please follow up-to-date guides to install each library 
