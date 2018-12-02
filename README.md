@@ -46,6 +46,17 @@ ROS-compatible implementation of the tracking API.
 
 ### All code should be compatible with the latest OpenCV. Refer to documentation for proper tracker_type names.
 
+# Benchmark dataset
+```
+Level 1 -> test/still
+Level 2 -> test/moving
+Level 3 -> test/fast
+Level 4 -> test/depth
+Level 5 -> test/frame
+Level 6 -> test/crowded
+Level 7 -> test/reverse
+```
+
 # Acknowledgements
 
 ## Adviser
