@@ -14,7 +14,8 @@ for helping create the test videos.
 
 # Errata
 For any errors or concerns with the code or the paper, please reach out to Orens Xhagolli (oxx6096@cs.rit.edu).
-Please feel free to use github issues or functionality if you would like to contribute. All contributions are welcome.
+Please feel free to use github issues or any other github functionality if you would like to contribute. 
+All contributions are welcome.
 
 # License
 This project is under the MIT License. For any questions related to licensing please reach out to 
