@@ -15,7 +15,7 @@ import re
 
 def main():
     if len(sys.argv) != 3:
-        raise AssertionError("Usage: python tracker_comparison.py tracker_type tests_path")
+        raise AssertionError("Usage: python hierarchy_compare.py tracker_type tests_path")
 
     # Create the tracker
     tracker = getattr(cv2, "Tracker{}_create".format(sys.argv[1]))()
