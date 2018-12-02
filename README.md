@@ -9,6 +9,8 @@ This project requires OpenCV and/or ROS to properly run. Please follow up-to-dat
 properly. Usually a `requirements.txt` file can't achieve the desired goal properly since these are really large 
 libraries.
 
+Additionally, you might need to download pre-trained models to run GOTURN.
+
 # Usage
 ## Hierarchy of Tracking Comparison
 To run the hierarchical tests, follow the order described in the paper. The usage for `hierarchy_compare.py` is as 
