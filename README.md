@@ -3,6 +3,9 @@ Master's project code on implementing visual tracking algorithms for corobots
 
 # Acknowledgements
 
+## Adviser
+Thank you Dr. Zachary Butler for advising my Master's project.
+
 ## Code Resources
 Thank you to Dr. Satya Mallick for his tutorials on learnopencv.com.
 I reused a lot of the code from the tutorial on tracking on writing the comparison algorithms.
