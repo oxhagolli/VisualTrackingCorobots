@@ -9,6 +9,7 @@
 
 import rospy
 import cv2
+import sys
 
 from sensor_msgs.msg import Image as KinectImage
 from cv_bridge import CvBridge
@@ -31,9 +32,6 @@ class Robot:
         self.tracker_success, self.tracker_bbox = self.tracker.update(self.image)
 
     def visualize(self):
-        """
-            This section of code is based off of Satya Mallick's implementation from learnopencv.com - Changes have been made appropriately.
-        """
         if self.tracker_success:
             p1 = (int(self.tracker_bbox[0]), int(self.tracker_bbox[1]))
             p2 = (int(self.tracker_bbox[0] + self.tracker_bbox[2]), int(self.tracker_bbox[1] + self.tracker_bbox[3]))
@@ -62,11 +60,15 @@ class Robot:
 
 
 def main():
+    if len(sys.argv) != 2:
+        raise AssertionError("Usage: rosrun project_name tracker.py tracker_type")
+
+    # Create the tracker
+    tracker = getattr(cv2, "Tracker{}_create".format(sys.argv[1]))()
+
     # Initialize node
     rospy.init_node("oxx6096_tracker", anonymous=False)
-
-    tracker = cv2.TrackerMedianFlow_create() # create a tracker object
-    robot = Robot(tracker) # create the robot object
+    robot = Robot(tracker)  # create the robot object
 
     rospy.Subscriber("/camera/rgb/image_raw", KinectImage, robot.orchestrator, queue_size=1)
     rospy.Subscriber("/camera/rgb/image_raw", KinectImage, robot.selectROI, queue_size=1)
