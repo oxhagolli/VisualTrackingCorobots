@@ -1,6 +1,41 @@
 # Visual Tracking for Corobots
 Master's project code on implementing visual tracking algorithms for corobots
 
+# Usage
+## Hierarchy of Tracking Comparison
+To run the hierarchical tests, follow the order described in the paper. The usage for `hierarchy_compare.py` is as 
+follows:
+```
+python hierarchy_compare.py tracker_type tests_path
+```
+
+For example, if we were to run a MedianFlow tracker on the crowded environment test, it would look like this:
+```
+python hierarchy_compare.py MedianFlow tests/crowded
+```
+
+## Speed Comparison
+To run the speed tests, simply pick a tracker and the time that you would like to let it run for. The longer, 
+the more reliable your statistics will be. Avoid drifting scenarios during runtime to get an accurate read.
+The usage for `speed_compare.py` is as follows:
+```
+python speed_compare.py tracker_type number_seconds
+``` 
+
+For example, if we were to run the AdaBoost tracker, over the course of 1 minute, we would do the following:
+```
+python speed_compare.py Boosting 60
+```
+
+## ROS Tracker
+
+Please follow the documentation on the ROS website to properly run the `tracker.py` file. This is simply a 
+ROS-compatible implementation of the tracking API.
+
+### Please note that capitalization matters during usage. Use proper case.
+
+### All code should be compatible with the latest OpenCV. Refer to documentation for proper tracker_type names.
+
 # Acknowledgements
 
 ## Adviser
